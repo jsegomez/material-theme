@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="sidebar">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="btn-theme">
+    <p>Color</p>
+    <mat-slide-toggle
+      [(ngModel)]="isDarkMode"
+      (ngModelChange)="changeTheme($event)"
+    >
+    </mat-slide-toggle>
+  </div>
+</mat-toolbar>
