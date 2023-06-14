@@ -1,7 +1,10 @@
 <mat-toolbar color="secondary" class="sidebar">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'buttons'">Botones</button>
+    <button mat-menu-item [routerLink]="'forms'">Formularios</button>
+    <button mat-menu-item [routerLink]="'layout'">Layout</button>
+  </mat-menu>
 
   <div class="btn-theme">
     <p>Color</p>
