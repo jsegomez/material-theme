@@ -68,7 +68,9 @@ $cusca-yellow: (
 $light-theme: mat.define-light-theme((color: (primary: mat.define-palette($cusca-blue, 500),
         accent: mat.define-palette($cusca-yellow, 500),
       ),
-      typography: mat.define-typography-config($font-family: 'Montserrat',
+      typography: mat.define-typography-config(
+        $font-family: 'Montserrat',
+        $button: mat.define-typography-level(14px, 14px, 600),
       ),
       density: 0,
     ));

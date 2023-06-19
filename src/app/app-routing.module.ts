@@ -5,11 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { FormsComponent } from './pages/forms/forms.component';
 import { LayoutFlexComponent } from './pages/layout-flex/layout-flex.component';
+import { TextsComponent } from './pages/texts/texts.component';
 
 const routes: Routes = [
   { path: 'buttons',  component: ButtonsComponent },
   { path: 'forms',    component: FormsComponent   },
-  { path: 'layout',   component: LayoutFlexComponent }
+  { path: 'layout',   component: LayoutFlexComponent },
+  { path: 'text',   component: TextsComponent }
 ];
 
 @NgModule({
