@@ -65,14 +65,97 @@ $cusca-yellow: (
   )
 );
 
-$light-theme: mat.define-light-theme((color: (primary: mat.define-palette($cusca-blue, 500),
-        accent: mat.define-palette($cusca-yellow, 500),
+$cusca-black: (
+  50 : #e0e0e0,
+  100 : #b3b3b3,
+  200 : #808080,
+  300 : #4d4d4d,
+  400 : #262626,
+  500 : #000000,
+  600 : #000000,
+  700 : #000000,
+  800 : #000000,
+  900 : #000000,
+  A100 : #a6a6a6,
+  A200 : #8c8c8c,
+  A400 : #737373,
+  A700 : #666666,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+$cusca-black-accent: (
+  50 : #fff8e0,
+  100 : #ffeeb3,
+  200 : #ffe380,
+  300 : #ffd74d,
+  400 : #ffcf26,
+  500 : #ffc600,
+  600 : #ffc000,
+  700 : #ffb900,
+  800 : #ffb100,
+  900 : #ffa400,
+  A100 : #ffffff,
+  A200 : #fffaf2,
+  A400 : #ffe5bf,
+  A700 : #ffdba6,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+$light-theme: mat.define-light-theme(
+  (
+    color:
+    (
+      primary: mat.define-palette($cusca-blue, 500),
+      accent: mat.define-palette($cusca-yellow, 500),
+    ),
+      typography: mat.define-typography-config($font-family: 'Montserrat',
+      $button: mat.define-typography-level(14px, 14px, 600),
+    ),
+      density: 0,
+  ),
+);
+
+$dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette($cusca-black, 500),
+        accent: mat.define-palette($cusca-black-accent, 500),
       ),
-      typography: mat.define-typography-config(
-        $font-family: 'Montserrat',
+      typography: mat.define-typography-config($font-family: 'Montserrat',
         $button: mat.define-typography-level(14px, 14px, 600),
       ),
       density: 0,
     ));
 
 @include mat.all-component-themes($light-theme);
+
+.dark-mode{
+  @include mat.all-component-colors($dark-theme)
+}
